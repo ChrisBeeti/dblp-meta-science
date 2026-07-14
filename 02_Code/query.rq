@@ -1,8 +1,3 @@
-# DBLP MetaScience
-
-
-## Query for dblp_dataset_14072026
-``` sql
 PREFIX dblp: <https://dblp.org/rdf/schema#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 SELECT ?publ ?title ?doi ?year ?stream ?venue ?pers ?name ?homepage ?ord ?n WHERE {
@@ -14,9 +9,8 @@ SELECT ?publ ?title ?doi ?year ?stream ?venue ?pers ?name ?homepage ?ord ?n WHER
   ?sig rdf:type dblp:AuthorSignature .
   ?sig dblp:signatureOrdinal ?ord .
   ?sig dblp:signatureCreator ?pers .
-  ?publ dblp:doi ?doi . 
-  ?sig dblp:signatureDblpName ?name . 
+  ?publ dblp:doi ?doi .
+  ?sig dblp:signatureDblpName ?name .
   OPTIONAL { ?stream dblp:streamTitle ?venue . }
   OPTIONAL { ?pers dblp:homepage ?homepage . }
 }
-```
