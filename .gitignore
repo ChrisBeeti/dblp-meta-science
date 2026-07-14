@@ -4,7 +4,7 @@ __pycache__/
 *$py.class
 
 .idea
-01_Data/
+01_Data/dblp_data
 
 # C extensions
 *.so
